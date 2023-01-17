@@ -1,0 +1,60 @@
+#----------------------------------------------------------------
+# outText = []
+# cryptText = []
+# lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# string=input("enter a word: ")
+# step=int(input("enter your step: "))
+# x=[*string]
+# index=lowercase.index(x[0])
+# crypting = (index + step) % 26
+# cryptText.append(crypting)
+# newLetter = lowercase[crypting]
+# outText.append(newLetter)
+#
+# index=lowercase.index(x[1])
+# crypting = (index + step) % 26
+# cryptText.append(crypting)
+# newLetter = lowercase[crypting]
+# outText.append(newLetter)
+#
+# index=lowercase.index(x[2])
+# crypting = (index + step) % 26
+# cryptText.append(crypting)
+# newLetter = lowercase[crypting]
+# outText.append(newLetter)
+# print(''.join(outText))
+#--------------------------------------------------------------------
+
+# a = float(input("Enter a: "))
+# b = float(input("Enter b: "))
+# c = float(input("Enter c: "))
+# if a < b:
+#     if b < c:
+#         print (a, "<", b, "<", c)   # 2-3-4
+#     else:
+#         if a < c:
+#             print (a, "<", c, "<", b)
+#         else:
+#             print (c, "<", a, "<", b)
+# else:
+#     if c < b:
+#         print (c, "<", b, "<", a)
+#     else:
+#         if c < a:
+#             print (b, "<", c, "<", a)
+#         else:
+#             print (b, "<", a, "<", c)
+
+#----------------------------------------------
+# a = float(input("Enter a: "))
+# b = float(input("Enter b: "))
+# c = float(input("Enter c: "))
+#
+# if a > b:
+#     a, b = b, a
+# if a > c:
+#     a, c = c, a
+# if b > c:
+#     b, c = c, b
+#
+# print(a, "<", b, "<", c)
