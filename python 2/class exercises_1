@@ -1,0 +1,74 @@
+class BankAccount:
+    def __init__(self,x):
+        self.balance=x
+
+    def deposite(self,amount):
+        self.balance+=amount
+    def withdraw(self,amount):
+        if self.balance>amount:
+            self.balance-=amount
+        else:
+            print("balance is not enough")
+    def check_balance(self):
+        print(self.balance)
+
+
+furkcan_account=BankAccount(50)
+print("for furkcan")
+furkcan_account.check_balance()
+furkcan_account.deposite(2000)
+furkcan_account.check_balance()
+furkcan_account.withdraw(150)
+furkcan_account.check_balance()
+#------------------------------
+sinan=BankAccount(100)
+print("for sinan")
+sinan.check_balance()
+sinan.deposite(500)
+sinan.check_balance()
+sinan.withdraw(1000)
+# #----------------------------
+class Book:
+    def __init__(self,title, author):
+        self.title=title
+        self.author=author
+        self.status="on shelf"
+
+class Library:
+    def __init__(self):
+        self.books=[]
+
+    def add_book(self,book):
+        self.books.append(book)
+
+    def check_out(self,book):
+        if book.status=="on shelf":
+            book.status="checked out"
+        else:
+            print("sorry we dont have the book right now")
+
+    def return_book(self,book):
+        book.status="on shelf"
+
+    def display_books(self):
+        for book in self.books:
+            print(f"Title: {book.title}, Author: {book.author}, Status: {book.status}")
+
+
+book1=Book("data stucutre in java","x")
+book2=Book("machine lerninig in health care section","jason apx")
+book3=Book("data 6 class session","abdullah")
+
+develhope_lib=Library()
+develhope_lib.add_book(book1)
+develhope_lib.add_book(book2)
+develhope_lib.add_book(book3)
+
+develhope_lib.display_books()
+
+develhope_lib.check_out(book1)
+print("after checkout")
+develhope_lib.display_books()
+print("after retun")
+develhope_lib.return_book(book1)
+develhope_lib.display_books()
